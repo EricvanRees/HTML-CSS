@@ -1,0 +1,38 @@
+<html>
+  <head>
+  </head>
+    <script>
+	
+	  var myNumber; 
+	  var colors;
+	  var color;
+	  var guess_input;
+	  var myBody;
+	  	  
+	 function guess_game(){
+	
+	    myNumber = Math.floor((Math.random()*8));
+	    colors = ["red", "blue", "green", "yellow", "purple", "orange", "white", "black"];
+	    guess_input = prompt("I am thinking of a list of colors: " + "\n \n blue, cyan, gold, gray, green, magenta, orange, red, white, yellow" + "\n \n What color I am thinking of?");
+	    color = colors[myNumber];
+	    				
+		while (guess_input != color){
+		     
+		    if (guess_input == color) {
+				break;
+			}
+		
+		    else {
+				alert("\n \n" + "Sorry, I don't recognize your color, please try again" + "\n \n The target is " + color);
+				guess_input = prompt("choose again");
+				}
+		}
+	
+	 alert("you chose the right color" + "\n \n The target is " + color);
+	}
+  </script>
+  </head>
+  <body onload="guess_game();">
+  
+  </body>
+</html>

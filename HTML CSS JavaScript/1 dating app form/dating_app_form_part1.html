@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Coursera assignment pt1</title>
+	<title>Demonstration of Linking to a Style File</title>
+	</head>
+  <body>
+        <h1>Please Enter Your Details For Our Dating Website!</h1>
+        <fieldset>   
+		  <legend>Your Face</legend>
+		    <form method="post" enctype="multipart/form-data" action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+              <label>Your image:</label><input type="file" name="fileToUpload"><br>
+		      <label> <img id="preview">Image Preview: </label></form>
+	    </fieldset>
+	    <fieldset>
+	    <legend>Your General Details</legend>
+		    <label for="name">Name:</label>
+			<input type="text" required value="Your name here"><br>
+			<label for="gender">Gender</label>
+			<input id="autow" type="radio" name="gender" value="male" required> Male
+			<input id="autow" type="radio" name="gender" value="female"> Female <br>
+			<label for="age">Age:</label>
+		    <input type="number" min="0" max="99" step="1" value="18" name="age" required><br>
+            <label for="birthday">Date of birth:</label>
+            <input type="date" name="birthday"><br>
+            <label for="color">Your favorite color:</label>
+            <input type="color" name="color"> <br>
+			<label for="country">Which country:</label>
+			<select name="country">
+			<option value="">No selection</option>
+			<option value="AF">Afghanistan</option>
+			<option value="AL">Albania</option>
+			<option value="GE">Germany</option>
+			<option value="US">United States</option>
+			<option value="SP">Spain</option>
+			</select>
+	  </fieldset>
+	  <fieldset>
+	    <legend>Your Indicators</legend>
+		 <label for="mood">Height:</label>
+			Short <input id="au" type="range" min="0" max="100" step="5" value="50" name="height"> Tall<br>
+		<label for="mood">Salary:</label>
+			Poor <input id="au" type="range" min="0" max="100" step="5" value="50" name="salary"> Rich<br>
+	  </fieldset>
+	  <fieldset>
+	    <legend>Your Contact Information</legend>
+		  <label for="email">Email:</label>
+		  <input type="email" name="email" required><br>
+		  <label for="mobile">Mobile:</label>
+		  <input type="tel" name="mobile"><br>
+		  <label for="address">Address:</label>
+		  <textarea rows="3" cols="30" name="address"></textarea><br>		  
+		  <label for="method" name="methodofcontact">Method to contact you:</label>
+		  <input id="autow" type="checkbox">Email
+		  <input id="autow" type="checkbox">Whatsapp
+		  <input id="autow" type="checkbox">In-app chat
+	  </fieldset>
+	  <input type="submit" value="Submit!">
+    </form>
+	  <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+  </body> 

@@ -1,0 +1,52 @@
+<html>
+  <head>
+  </head>
+    <script type="text/javascript">
+	
+	  var myNumber; 
+	  var guesses = 0;
+	  var finished = false;
+	  var colors = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
+	  var target;
+	  var guess_input;
+	  var color;
+	  	  
+		function guess_game() {
+			var myNumber = Math.floor((Math.random()*8));
+			color = colors[myNumber];
+			alert("The target is " + color);
+						  		
+			while (guess_input != color){
+				guess_input = prompt("I am thinking of a list of colors: " + "\n \n blue, cyan, gold, gray, green, magenta, orange, red, white, yellow" + "\n \n What color I am thinking of?");
+				guesses += 1;
+				finished = guess_check();
+			}
+		}
+		function guess_check() {
+			var myBody = document.getElementsByTagName("body")[0];
+									
+			if(colors.indexOf(guess_input)== -1) {
+				alert("Sorry, I don't recognize your color, please try again." + "\n \n blue, cyan, gold, gray, green, magenta, orange, red, white, yellow" + "\n \n What color I am thinking of?");
+				return false;
+			}
+			 
+			if (colors.indexOf(guess_input) > colors.indexOf(color)) {
+				alert("Your color is higher" + "\n \n blue, cyan, gold, gray, green, magenta, orange, red, white, yellow" + "\n \n What color I am thinking of?");
+				return false;
+			}
+			if (colors.indexOf(guess_input) < colors.indexOf(color)) {
+				alert("Your color is lower"+ "\n \n blue, cyan, gold, gray, green, magenta, orange, red, white, yellow" + "\n \n What color I am thinking of?");
+				return false;
+			}
+	
+			
+			alert("you chose the right color" + "\n \n The target is " + color + "\n It took you " + guesses + " guesses." + "\n \n You can see the colour in the background");
+			myBody.style.background = color;
+			return true;
+		}
+  </script>
+  </head>
+  <body onload="guess_game();">
+  
+  </body>
+</html>

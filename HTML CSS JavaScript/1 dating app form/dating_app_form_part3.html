@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <title>Coursera assignment pt1</title>
+	<title>Demonstration of Linking to a Style File</title>
+	<style>
+	  fieldset {background: lightyellow}
+	  fieldset {border: 10px solid yellow}
+	  fieldset {margin-bottom: 10px} 
+	  fieldset {width: 720px;}
+	  label:hover {font-size:40px}
+	  label {width: 180px}
+	  label {display:inline-block}
+	  label {text-align: right}
+	  label {text-align: top}
+	  textarea {width: 360px}
+	  textarea {height: 50px}
+	  span#span1 {background-color: red}
+	  span#span1 {padding: 0px 8px 8px 8px}
+	  span#span1 {margin: 0px}
+	  span#span1 {display: inline-block}
+	  span#span1 {color: white}
+	  span#span1 {text-align: center}
+	  span#span2 {background-color: purple}
+	  span#span2 {padding: 0px 8px 8px 11px}
+	  span#span2 {margin: 0px}
+	  span#span2 {display: inline-block}
+	  span#span2 {color: white}
+	  span#span2 {text-align: center}
+      span#span3 {background-color: red}
+	  span#span3 {padding: 8px 11px 0px 8px}
+	  span#span3 {margin: 0px}
+	  span#span3 {display: inline-block}
+	  span#span3 {color: white}
+	  span#span3 {text-align: center}
+      span#span4 {background-color: purple}
+	  span#span4 {padding: 8px 8px 0px 8px}
+	  span#span4 {margin: 0px}
+	  span#span4 {display: inline-block}
+	  span#span4 {color: white}
+	  span#span4 {text-align: center} 
+    </style>	
+  </head>
+  <body>
+        <h1>Please Enter Your Details For Our Dating Website!</h1>
+        <fieldset>   
+		  <legend>Your Face</legend>
+		    <form method="post" enctype="multipart/form-data" action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+              <label>Your image:</label><input type="file" name="fileToUpload"><br>
+		      <label> <img id="preview">Image Preview: </label></form>
+	    </fieldset>
+	    <fieldset>
+	      <legend>Your General Details</legend>
+		    <label for="name">Name:</label>
+			<input type="text" required><br>
+			<label for="gender">Gender</label>
+			<input id="autow" type="radio" name="gender" value="male" required> Male
+			<input id="autow" type="radio" name="gender" value="female"> Female <br>
+			<label for="age">Age:</label>
+		    <input type="number" min="0" max="99" step="1" value="18" name="age" required><br>
+            <label for="birthday">Date of birth:</label>
+            <input type="date" name="birthday"><br>
+            <label for="color">Your favorite color:</label>
+            <input type="color" name="color"> <br>
+			<label for="country">Which country:</label>
+			<select name="country">
+			<option value="">No selection</option>
+			<option value="AF">Afghanistan</option>
+			<option value="AL">Albania</option>
+			<option value="GE">Germany</option>
+			<option value="US">United States</option>
+			<option value="SP">Spain</option>
+			</select>
+	  </fieldset>
+	  <fieldset>
+	    <legend>Your Indicators</legend>
+		   <label for="mood">Height:</label><span id="span1">Short</span><input id="au" type="range" min="0" max="100" step="5" value="50" name="height"><span id="span2">Tall</span><br>
+		   <label for="mood">Salary:</label><span id="span3">Poor</span><input id="au" type="range" min="0" max="100" step="5" value="50" name="salary"><span id="span4">Rich</span><br>
+	  </fieldset>
+	  <fieldset>
+	    <legend>Your Contact Information</legend>
+		  <label for="email">Email:</label>
+		  <input type="email" name="email" required><br>
+		  <label for="mobile">Mobile:</label>
+		  <input type="tel" name="mobile"><br>
+		  <label for="address">Address:</label>
+		  <textarea rows="3" cols="30" name="address"></textarea><br>		  
+		  <label for="method" name="methodofcontact">Method to contact you:</label>
+		  <input id="autow" type="checkbox">Email
+		  <input id="autow" type="checkbox">Whatsapp
+		  <input id="autow" type="checkbox">In-app chat
+	  </fieldset>
+	  <input type="submit" value="Submit!">
+    </form>
+	  <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+  </body> 
